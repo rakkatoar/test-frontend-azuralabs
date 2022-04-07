@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 const Blog = () => {
 
     return (
@@ -10,12 +11,28 @@ const Blog = () => {
 							}
 						`}
 					</style>
-					<div className="title mt-20 mb-10">
+					<motion.div
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						viewport={{ once: true }}
+						transition={{
+							duration: 1,
+							delay:.2,
+							ease: "linear",
+					}} className="title mt-20 mb-10">
 						<p className="text-center text-3xl font-semibold mb-4">Ikuti Pengumuman Terbaru Kami</p>
 						<p className="text-center text-xl">Jangan sampai ketinggalan pengumuman hingga berita terbaru kami</p>
-					</div>
+					</motion.div>
 					<div className="blogs flex w-full">
-						<div className="blog-wrapper w-full flex justify-center items-center flex-col">
+						<motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							viewport={{ once: true }}
+							transition={{
+								duration: 1,
+								delay:.2,
+								ease: "linear",
+						}} className="blog-wrapper w-full flex justify-center items-center flex-col">
 							<button className="p-2 rounded-lg bg-red-primary flex items-center w-fit mb-5">
 									<p className="text-white">Pengumuman</p>
 							</button>
@@ -35,8 +52,16 @@ const Blog = () => {
 									</button>
 								</div>
 							</div>
-						</div>
-						<div className="blog-wrapper w-full flex justify-center items-center flex-col">
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							viewport={{ once: true }}
+							transition={{
+								duration: 1,
+								delay:.4,
+								ease: "linear",
+						}} className="blog-wrapper w-full flex justify-center items-center flex-col">
 							<button className="p-2 rounded-lg bg-yellow-primary flex items-center w-fit mb-5">
 									<p className="text-white">Berita Terbaru</p>
 							</button>
@@ -56,8 +81,16 @@ const Blog = () => {
 									</button>
 								</div>
 							</div>
-						</div>
-						<div className="blog-wrapper w-full flex justify-center items-center flex-col">
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							viewport={{ once: true }}
+							transition={{
+								duration: 1,
+								delay:.6,
+								ease: "linear",
+						}} className="blog-wrapper w-full flex justify-center items-center flex-col">
 							<button className="p-2 rounded-lg bg-red-primary flex items-center w-fit mb-5">
 									<p className="text-white">Pengumuman</p>
 							</button>
@@ -65,7 +98,7 @@ const Blog = () => {
 								<div className="content">
 									<div className="relative w-full h-[24vw]">
 										<Image 
-											src="/images/blog-1.png"
+											src="/images/blog-3.png"
 											layout="fill"
 											objectFit="contain"
 											alt=""
@@ -77,7 +110,7 @@ const Blog = () => {
 									</button>
 								</div>
 							</div>
-						</div>
+						</motion.div>
 					</div>
 				</div>
     );

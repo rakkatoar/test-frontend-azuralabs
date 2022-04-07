@@ -1,11 +1,12 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import About from '../components/About'
 import Banner from '../components/Banner'
 import Benefit from '../components/Benefit'
 import Blog from '../components/Blog'
 import CarouselSection from '../components/CarouselSection'
+import Contact from '../components/Contact'
+import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
@@ -20,6 +21,9 @@ export default function Home() {
       <Benefit/>
       <Blog/>
       <CarouselSection/>
+      <About/>
+      <Contact/>
+      <Footer/>
     </div>
   )
 }
