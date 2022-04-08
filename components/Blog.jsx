@@ -69,7 +69,7 @@ const Blog = () => {
                         className="blog-wrapper w-full flex justify-center items-center flex-col"
                     >
 											<a
-                                    target="_blank"
+                                    target="_blank" rel="noreferrer" 
                                     href={blog.urlType}
                                 >
                         <button
@@ -96,7 +96,7 @@ const Blog = () => {
                                     {blog.title}
                                 </p>
                                 <a
-                                    target="_blank"
+                                    target="_blank" rel="noreferrer" 
                                     href={blog.url}
                                 >
                                     <button className="py-2 px-6 rounded-lg bg-white flex items-center border-2 border-primary-color mt-2 ml-1 hover:scale-105 duration-500">

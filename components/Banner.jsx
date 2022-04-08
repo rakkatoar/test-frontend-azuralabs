@@ -61,7 +61,7 @@ const Banner = () => {
                     </p>
                     <div className="flex flex-col items-end h-full justify-between">
                         {socialMedia.map((media, i) => (
-                            <a key={i} id={i} target="_blank" href={media.url}>
+                            <a key={i} id={i} target="_blank" rel="noreferrer" href={media.url}>
                                 <Image
                                     src={media.icon}
                                     width="30"

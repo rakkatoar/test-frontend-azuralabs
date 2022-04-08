@@ -63,7 +63,7 @@ const Footer = () => {
 								<div className="sosmed flex w-4/5 justify-between">
 									{
 									socialMedia.map((media, i) => (
-										<a key={i} id={i} target="_blank" href={media.url} className="hover:scale-110 duration-500"
+										<a key={i} id={i} target="_blank" rel="noreferrer" href={media.url} className="hover:scale-110 duration-500"
 										><Image src={media.icon}
 										width="40"
 										height="40"
