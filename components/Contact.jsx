@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Contact = () => {
 
     return (
-        <div className="bg-grey px-20 h-[80vh] flex justify-center items-center">
+        <div className="bg-grey px-20 h-[80vh] flex justify-center items-center font-quicksand">
 					<div className="w-4/6 flex">
 						<motion.div
 							initial={{ opacity: 0 }}
@@ -17,12 +17,16 @@ const Contact = () => {
  							<p className="text-4xl font-semibold mb-5">Layanan berkualitas tinggi untuk masyarakat indonesia</p>
 							<p className="mb-5 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
 							<div className="flex">
-								<button className="py-5 px-14 rounded-lg bg-primary-color flex items-center border-[3px] border-primary-color mt-2 mr-4">
-									<p className="text-white font-semibold text-3xl">Kontak Kami</p>
-								</button>
-								<button className="py-5 px-14 rounded-lg bg-grey flex items-center border-[3px] border-primary-color mt-2">
-									<p className="text-primary-color font-semibold text-3xl">Konsultasi</p>
-								</button>
+								<a href="#contact">
+									<button className="py-5 px-14 rounded-lg bg-primary-color flex items-center border-[3px] border-primary-color mt-2 mr-4 hover:scale-105 duration-500">
+										<p className="text-white font-semibold text-2xl 2xl:text-3xl">Kontak Kami</p>
+									</button>
+								</a>
+								<a href="#consultation">
+									<button className="py-5 px-14 rounded-lg bg-grey flex items-center border-[3px] border-primary-color mt-2 hover:scale-105 duration-500">
+										<p className="text-primary-color font-semibold text-2xl 2xl:text-3xl">Konsultasi</p>
+									</button>
+								</a>
 							</div>
 						</motion.div>
 						<motion.div

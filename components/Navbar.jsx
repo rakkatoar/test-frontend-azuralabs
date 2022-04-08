@@ -1,7 +1,14 @@
 import Image from "next/image";
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import cn from "classnames";
+import { useState, useEffect } from "react";
 const Navbar = () => {
+	const [navbarLinks, setNavbarLinks] = useState([
+		{ text: "Beranda", url:"#home", active:true },
+		{ text: "Tentang", url:"#about", active:false },
+		{ text: "Galeri", url:"#galeri", active:false },
+		{ text: "Blog", url:"#blog", active:false },
+	]);
 	const [scrollState, setScrollState] = useState(false)
 	useEffect(() => {
     const handleScroll = () => {
@@ -40,24 +47,31 @@ const Navbar = () => {
 					</style>
 						<Image src="/images/logo.png"
 											width="82"
-											height="50"
+											height="60"
 											alt=""/>
-					<div className="menus flex justify-between text-white w-2/5">
-						<a href="#" className="border-b-2">Beranda</a>
-						<a href="#">Tentang</a>
-						<a href="#">Galeri</a>
-						<a href="#">Blog</a>
+					<div className="menus flex justify-between text-white w-2/5 font-lato">
+						{
+							navbarLinks.map((link, i) => (
+								<a key={i} id={i} href={link.url} className={cn("hover:scale-105 duration-500",
+								{ "border-b-2": link.active }
+								)}>{link.text}</a>
+							))
+						}
 					</div>
 					<div className="right-navbar flex justify-between">
-						<button className="p-2 rounded-md h-[42px] w-[42px] bg-white mr-4">
+					<a href="#search">
+						<button className="p-2 rounded-md h-[42px] w-[42px] bg-white mr-4 hover:scale-110 duration-500">
 							<Image src="/images/search-icon.png"
-											width="30"
-											height="30"
+											width="25"
+											height="25"
 											alt="" />
 						</button>
-						<button className="p-2 rounded-md bg-white">
-								<p className="text-primary-color font-semibold">Customer Service</p>
-						</button>
+						</a>
+						<a href="#customer-service">
+							<button className="p-2 rounded-md h-[42px] bg-white hover:scale-105 duration-500">
+									<p className="text-primary-color font-semibold font-quicksand">Customer Service</p>
+							</button>
+						</a>
 					</div>
 				</motion.div>
 				</div>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Benefit = () => {
 
     return (
-				<div className="w-full h-[40vh] bg-grey">
+				<div className="w-full h-[40vh] bg-grey font-quicksand">
 					<div className="flex w-full h-full">
 						<motion.div
 							initial={{ opacity: 0 }}

@@ -4,7 +4,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'roboto': ['"Roboto"', 'cursive'],
+        'lato': ['"Lato"', 'cursive'],
+        'quicksand': ['"Quicksand"', 'cursive'],
+       },
+    },
     colors:{
       'primary-color':'#157599',
       'primary-color-light':'#2093BE',
