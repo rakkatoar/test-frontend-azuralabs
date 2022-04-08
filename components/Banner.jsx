@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 const Banner = () => {
     const [socialMedia, setSocialMedia] = useState([
         { icon: "/images/fb-icon.png", url: "https://facebook.com" },
-        { icon: "/images/tw-icon.png", url: "https://twitter.com" },
         { icon: "/images/ig-icon.png", url: "https://instagram.com" },
+        { icon: "/images/tw-icon.png", url: "https://twitter.com" },
         { icon: "/images/yt-icon.png", url: "https://youtube.com" },
     ]);
     return (
@@ -64,8 +64,8 @@ const Banner = () => {
                             <a key={i} id={i} target="_blank" rel="noreferrer" href={media.url}>
                                 <Image
                                     src={media.icon}
-                                    width="30"
-                                    height="30"
+                                    width={i == 3 ? 45: 30}
+                                    height={i == 3 ? 45: 30}
                                     className="hover:scale-110 duration-500"
                                     alt=""
                                 />
