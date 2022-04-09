@@ -31,7 +31,7 @@ const CarouselSection = () => {
                         <Carousel className="h-full" autoPlay showStatus={false} showThumbs={false} showArrows={false} dynamicHeight={false}>
                             {
                                 sliders.map((media, i) => (
-                                    <div className="h-[40vh] bg-dark-grey flex justify-center items-center rounded-lg">
+                                    <div key={i} className="h-[40vh] bg-dark-grey flex justify-center items-center rounded-lg">
                                         <Image src={media.image} width="180" height="120" alt={"image"+i+1}/>
                                     </div>
                                 ))
